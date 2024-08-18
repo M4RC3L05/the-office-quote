@@ -17,6 +17,9 @@ jobs:
         with:
           enable-cache: "true"
 
+      - name: create quotes.json file
+        run: touch quotes.json
+
       - name: check format
         run: devbox run check:format
 

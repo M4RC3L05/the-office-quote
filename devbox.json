@@ -15,7 +15,7 @@
         "curl -s \"$QUOTES_SOURCE_URL\" | jq -c -r \"map(del(.id, .character_avatar_url))\" > quotes.json",
         "go build -ldflags \"-s -w\" -o ./.bin/"
       ],
-      "check:fmt": [
+      "check:format": [
         "set -x",
         "gofmt -d -e -l ."
       ],
