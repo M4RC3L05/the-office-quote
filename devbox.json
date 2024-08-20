@@ -23,6 +23,11 @@
       "check:lint": [
         "set -x",
         "staticcheck ."
+      ],
+      "version": [
+        "git changelog CHANGELOG.md --tag \"$1\"",
+        "git add CHANGELOG.md",
+        "git release \"$1\""
       ]
     }
   }
