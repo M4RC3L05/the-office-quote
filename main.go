@@ -3,6 +3,7 @@ package main
 import (
 	_ "embed"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"math/rand"
 	"regexp"
@@ -11,6 +12,7 @@ import (
 
 //go:embed quotes.json
 var quotesData []byte
+var version = "dev-build"
 
 type Quotes []struct {
 	Character string `json:"character"`
@@ -18,6 +20,17 @@ type Quotes []struct {
 }
 
 func main() {
+	var versionFlag bool
+	flag.BoolVar(&versionFlag, "version", false, "Show version")
+
+	flag.Parse()
+
+	if versionFlag {
+		fmt.Println(version)
+
+		return
+	}
+
 	var quotes Quotes
 
 	json.Unmarshal(quotesData, &quotes)

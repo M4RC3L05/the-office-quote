@@ -13,7 +13,7 @@
       "compile": [
         "set -x",
         "curl -s \"$QUOTES_SOURCE_URL\" | jq -c -r \"map(del(.id, .character_avatar_url))\" > quotes.json",
-        "go build -ldflags \"-s -w\" -o ./.bin/"
+        "go build -ldflags \"-s -w -X main.version=\"$(VERSION=$(git tag --sort=-creatordate | head -n 1); [ -z \"$VERSION\" ] && VERSION=\"dev-build\"; echo $VERSION)\"\" -o ./.bin/"
       ],
       "check:format": [
         "set -x",
