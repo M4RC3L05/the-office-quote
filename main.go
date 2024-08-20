@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"math/rand"
+	"regexp"
 	"strings"
 )
 
@@ -23,15 +24,8 @@ func main() {
 
 	quote := quotes[rand.Intn(len(quotes))]
 
-	text := ""
+	re := regexp.MustCompile(`[.!?]\s+`)
+	sentences := strings.Join(re.Split(quote.Quote, -1), ".\n")
 
-	for _, fragment := range strings.Split(quote.Quote, ".") {
-		if len(fragment) <= 0 {
-			continue
-		}
-
-		text += fmt.Sprintf("%s.\n", strings.Trim(fragment, " "))
-	}
-
-	fmt.Printf("%s\n- %s\n", text, quote.Character)
+	fmt.Printf("%s\n\n- %s\n", sentences, quote.Character)
 }
