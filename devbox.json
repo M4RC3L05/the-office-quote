@@ -1,9 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
   "packages": [
-    "go-tools@latest",
     "git-extras@latest",
-    "go@1.23"
+    "go@1.23",
+    "runx:golangci/golangci-lint@latest",
+    "runx:mvdan/gofumpt@latest"
   ],
   "env": {
     "QUOTES_SOURCE_URL": "https://raw.githubusercontent.com/AkashRajpurohit/the-office-api/main/data/quotes.json"
@@ -18,11 +19,11 @@
       ],
       "check:format": [
         "set -x",
-        "gofmt -d -e -l ."
+        "gofumpt -d -e -l -extra $(find . -name '*.go')"
       ],
       "check:lint": [
         "set -x",
-        "staticcheck ."
+        "golangci-lint run --timeout 5m"
       ],
       "version": [
         "git changelog CHANGELOG.md --tag \"$1\"",

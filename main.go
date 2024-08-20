@@ -33,7 +33,9 @@ func main() {
 
 	var quotes Quotes
 
-	json.Unmarshal(quotesData, &quotes)
+	if err := json.Unmarshal(quotesData, &quotes); err != nil {
+		panic(err)
+	}
 
 	quote := quotes[rand.Intn(len(quotes))]
 

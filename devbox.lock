@@ -49,54 +49,6 @@
         }
       }
     },
-    "go-tools@latest": {
-      "last_modified": "2024-08-14T20:29:39Z",
-      "resolved": "github:NixOS/nixpkgs/33c968004c363ed5cddaba71215fd28845f68705#go-tools",
-      "source": "devbox-search",
-      "version": "2024.1",
-      "systems": {
-        "aarch64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/b5c8ms7sfgyhphg51bqm6b3934phk1y1-go-tools-2024.1",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/b5c8ms7sfgyhphg51bqm6b3934phk1y1-go-tools-2024.1"
-        },
-        "aarch64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/vjq5mll1g8yglp9dbcmq4aq6dkfnx0hk-go-tools-2024.1",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/vjq5mll1g8yglp9dbcmq4aq6dkfnx0hk-go-tools-2024.1"
-        },
-        "x86_64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/sw5ijbcwmn4xwqbkvvh65lfcqxmdcxc2-go-tools-2024.1",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/sw5ijbcwmn4xwqbkvvh65lfcqxmdcxc2-go-tools-2024.1"
-        },
-        "x86_64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/w2k2pzw3jgi1zk8ns94pliqwdp3rnwjm-go-tools-2024.1",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/w2k2pzw3jgi1zk8ns94pliqwdp3rnwjm-go-tools-2024.1"
-        }
-      }
-    },
     "go@1.23": {
       "last_modified": "2024-08-18T12:44:29Z",
       "resolved": "github:NixOS/nixpkgs/ff1c2669bbb4d0dd9e62cc94f0968cfa652ceec1#go_1_23",
@@ -144,6 +96,14 @@
           "store_path": "/nix/store/0k144pnsvy0wa3dcl1y3df7d4zskylc4-go-1.23.0"
         }
       }
+    },
+    "runx:golangci/golangci-lint@latest": {
+      "resolved": "golangci/golangci-lint@v1.60.1",
+      "version": "v1.60.1"
+    },
+    "runx:mvdan/gofumpt@latest": {
+      "resolved": "mvdan/gofumpt@v0.7.0",
+      "version": "v0.7.0"
     }
   }
 }
