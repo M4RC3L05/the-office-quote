@@ -25,11 +25,7 @@
         "set -x",
         "golangci-lint run --timeout 5m"
       ],
-      "version": [
-        "git changelog CHANGELOG.md --tag \"$1\"",
-        "git add CHANGELOG.md",
-        "git release \"$1\""
-      ]
+      "version": "git release -c CHANGELOG.md --semver \"$1\""
     }
   }
 }
