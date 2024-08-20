@@ -1,6 +1,54 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "git-extras@latest": {
+      "last_modified": "2024-08-18T12:44:29Z",
+      "resolved": "github:NixOS/nixpkgs/ff1c2669bbb4d0dd9e62cc94f0968cfa652ceec1#git-extras",
+      "source": "devbox-search",
+      "version": "7.2.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ywl04dn20qzkmjm2ym8x7rx4dk53cmdl-git-extras-7.2.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ywl04dn20qzkmjm2ym8x7rx4dk53cmdl-git-extras-7.2.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/pwwc81kq66v8igl8il3j20kllms6srlg-git-extras-7.2.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/pwwc81kq66v8igl8il3j20kllms6srlg-git-extras-7.2.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jrgm0vvb4lyp4c9lvc36cgvaiqxsvpbb-git-extras-7.2.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jrgm0vvb4lyp4c9lvc36cgvaiqxsvpbb-git-extras-7.2.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/d69im5v2sibfh4grihq53fcasb9irap0-git-extras-7.2.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/d69im5v2sibfh4grihq53fcasb9irap0-git-extras-7.2.0"
+        }
+      }
+    },
     "go-tools@latest": {
       "last_modified": "2024-08-14T20:29:39Z",
       "resolved": "github:NixOS/nixpkgs/33c968004c363ed5cddaba71215fd28845f68705#go-tools",
