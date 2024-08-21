@@ -25,7 +25,10 @@
         "set -x",
         "golangci-lint run --timeout 5m"
       ],
-      "version": "git release -c CHANGELOG.md --semver \"$1\""
+      "version": [
+        "set -x",
+        "git release -c CHANGELOG.md --semver \"$1\""
+      ]
     }
   }
 }
