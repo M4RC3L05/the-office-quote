@@ -19,7 +19,7 @@
       ],
       "check:format": [
         "set -x",
-        "gofumpt -d -e -l -extra $(find . -name '*.go')"
+        "gofumpt -d -e -l -extra ."
       ],
       "check:lint": [
         "set -x",
