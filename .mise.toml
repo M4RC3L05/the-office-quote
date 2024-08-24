@@ -1,0 +1,33 @@
+[tools]
+go = "1.23"
+"go:github.com/golangci/golangci-lint/cmd/golangci-lint" = "latest"
+"go:mvdan.cc/gofumpt" = "latest"
+
+[env]
+QUOTES_SOURCE_URL = "https://raw.githubusercontent.com/AkashRajpurohit/the-office-api/main/data/quotes.json"
+
+[tasks."compile"]
+run = """
+set -ex
+
+curl -s "$QUOTES_SOURCE_URL" | jq -c -r "map(del(.id, .character_avatar_url))" > quotes.json
+
+VERSION=$(git tag --sort=-creatordate | head -n 1)
+[ -z "$VERSION" ] && VERSION="dev-build"
+
+go build -ldflags "-s -w -X main.version="$VERSION"" -o ./.bin/
+"""
+
+[tasks."check:format"]
+run = """
+set -ex
+
+gofumpt -d -e -l -extra .
+"""
+
+[tasks."check:lint"]
+run = """
+set -ex
+
+golangci-lint run --timeout 5m --show-stats
+"""
