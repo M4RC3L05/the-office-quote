@@ -2,21 +2,19 @@ package main
 
 import (
 	_ "embed"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"math/rand"
-	"regexp"
-	"strings"
+
+	"gopkg.in/yaml.v3"
 )
 
-//go:embed quotes.json
+//go:embed data/quotes.yaml
 var quotesData []byte
 var version = "dev-build"
 
 type Quotes []struct {
-	Character string `json:"character"`
-	Quote     string `json:"quote"`
+	Text string `yaml:"text"`
 }
 
 func main() {
@@ -33,14 +31,11 @@ func main() {
 
 	var quotes Quotes
 
-	if err := json.Unmarshal(quotesData, &quotes); err != nil {
+	if err := yaml.Unmarshal(quotesData, &quotes); err != nil {
 		panic(err)
 	}
 
 	quote := quotes[rand.Intn(len(quotes))]
 
-	re := regexp.MustCompile(`[.!?]\s+`)
-	sentences := strings.Join(re.Split(quote.Quote, -1), ".\n")
-
-	fmt.Printf("%s\n\n- %s\n", sentences, quote.Character)
+	fmt.Printf("%s\n", quote.Text)
 }

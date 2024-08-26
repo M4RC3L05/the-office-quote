@@ -1,0 +1,609 @@
+---
+# yamllint disable rule:line-length
+- text: |-
+    “Sometimes I’ll start a sentence and I don’t even know where it’s going. I just hope I find it along the way.”
+    - Michael Scott
+
+- text: |-
+    “Whenever I’m about to do something, I think, ‘Would an idiot do that?’ and if they would, I do not do that thing.”
+    - Dwight Schrute
+
+- text: |-
+    “I talk a lot, so I’ve learned to just tune myself out…”
+    - Kelly Kapoor
+
+- text: |-
+    “Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.”
+    - Michael Scott
+
+- text: |-
+    “I’m not superstitious, but I am a little stitious.”
+    - Michael Scott
+
+- text: |-
+    “Do I need to be liked? Absolutely not. I like to be liked. I enjoy being liked. I have to be liked, but it’s not like this compulsive need to be liked, like my need to be praised.”
+    - Michael Scott
+
+- text: |-
+    “I knew exactly what to do, but in a much more real sense I had no idea what to do.”
+    - Michael Scott
+
+- text: |-
+    “I am Beyonce always.”
+    - Michael Scott
+
+- text: |-
+    “I wish there was a way to know you’re in the good old days, before you’ve actually left them.”
+    - Andy Bernard
+
+- text: |-
+    “For my new year’s resolution, I gave up drinking… during the week.”
+    - Meredith Palmer
+
+- text: |-
+    “And I feel God in this Chili’s tonight.”
+    - Pam Beesley
+
+- text: |-
+    “Identity theft is not a joke, Jim! Millions of families suffer every year.”
+    - Dwight Schrute
+
+- text: |-
+    “No, Rose, they are not breathing. And they have no arms or legs … Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?”
+    - Michael Scott
+
+- text: |-
+    “I am running away from my responsibilities and it feels good.”
+    - Michael Scott
+
+- text: |-
+    “I live by one rule: No office romances, no way. Very messy, inappropriate…no. But, I live by another rule: Just do it…Nike.”
+    - Michael Scott
+
+- text: |-
+    “Today, smoking is going to save lives.”
+    - Dwight Schrute
+
+- text: |-
+    “I understand nothing.”
+    - Michael Scott
+
+- text: |-
+    “Boy have you done lost your mind, ’cause I’ll help you find it!”
+    - Stanley Hudson
+
+- text: |-
+    “I just want to lie on the beach and eat hot dogs. That’s all I’ve ever wanted.”
+    - Kevin Malone
+
+- text: |-
+    “Your advice was good, but Jan’s was bigger.”
+    - Michael Scott
+
+- text: |-
+    “In the Schrute family, the youngest child raises the others. I’ve been raising children since I was a baby.”
+    - Dwight Schrute
+
+- text: |-
+    “Me think, why waste time say lot word, when few word do trick.”
+    - Kevin Malone
+
+- text: |-
+    “How is it possible that in five years, I’ve had two engagements and only one chair?”
+    - Pam Beesley
+
+- text: |-
+    “Sometimes the clothes at Gap Kids are too flashy, so I’m forced to go to the American Girl store and order clothes for large colonial dolls.”
+    - Angela Martin
+
+- text: |-
+    “I’m glad Michael’s getting help. He has a lot of issues, and he’s stupid.”
+    - Phyllis Lapin-Vance
+
+- text: |-
+    “Sorry I annoyed you with my friendship.”
+    - Andy Bernard
+
+- text: |-
+    “Mini cupcakes? As in the mini version of regular cupcakes? Which is already a mini version of cake? Honestly, where does it end with you people?”
+    - Kevin Malone
+
+- text: |-
+    “I want you to rub butter on my foot… Pam, please? I have Country Crock.”
+    - Michael Scott
+
+- text: |-
+    “I am faster than 80 percent of all snakes.”
+    - Dwight Schrute
+
+- text: |-
+    “I don’t care what they say about me. I just want to eat.”
+    - Pam Beesley
+
+- text: |-
+    “I love inside jokes. I’d love to be a part of one someday.”
+    - Michael Scott
+
+- text: |-
+    “Wikipedia is the best thing ever. Anyone in the world can write anything they want about any subject. So you know you are getting the best possible information.”
+    - Michael Scott
+
+- text: |-
+    “I mean, who says exactly what they’re thinking? What kind of game is that?”
+    - Kelly Kapoor
+
+- text: |-
+    “I wanna do a cartwheel. But real casual-like. Not enough to make a big deal out of it, but I know everyone saw it. One stunning, gorgeous cartwheel.”
+    - Creed Bratton
+
+- text: |-
+    “Pam and I would sometimes hum the same high-pitched note and try to get Dwight to make an appointment with an ear doctor. And, uh, Pam called it… pretendinitis.”
+    - Jim Halpert
+
+- text: |-
+    “I’m such a perfectionist that I’d kinda rather not do it at all than do a crappy version.”
+    - Ryan Howard
+
+- text: |-
+    “Disposable cameras are fun although it does seem wasteful and you don’t ever get to see your pictures.”
+    - Erin Hannon
+
+- text: |-
+    “I’m not a millionaire. I thought I would be by the time I was 30, but I wasn’t even close. Then I thought maybe by 40, but by 40 I had less money than I did when I was 30.”
+    - Michael Scott
+
+- text: |-
+    “I’m an early bird and I’m a night owl so I’m wise and I have worms.”
+    - Michael Scott
+
+- text: |-
+    “No, I’m not going to tell them about the downsizing. If a patient has cancer, you don’t tell them.”
+    - Michael Scott
+
+- text: |-
+    “Bears, beets, Battlestar Galactica.”
+    - Jim Halpert
+
+- text: |-
+    “You only live once? False. You live every day. You only die once.”
+    - Dwight Schrute
+
+- text: |-
+    “I’ve been involved in a number of cults, both a leader and a follower. You have more fun as a follower, but you make more money as a leader.”
+    - Creed Bratton
+
+- text: |-
+    “Dwight, you ignorant slut!”
+    - Michael Scott
+
+- text: |-
+    “I declare bankruptcy!”
+    - Michael Scott
+
+- text: |-
+    “The only difference between me and a homeless man is this job. I will do whatever it takes to survive like I did when I was a homeless man.”
+    - Creed Bratton
+
+- text: |-
+    “There’s too many people on this earth. We need a new plague.”
+    - Dwight Schrute
+
+- text: |-
+    “I got six numbers. One more would have been a complete telephone number.”
+    - Kevin Malone
+
+- text: |-
+    “Guess what, I have flaws. What are they? Oh, I don’t know. I sing in the shower. Sometimes I spend too much time volunteering. Occasionally I’ll hit somebody with my car. So sue me.”
+    -Michael Scott
+
+- text: |-
+    “That’s what she said.”
+    - Michael Scott
+
+- text: |-
+    “Would I ever leave this company? Look, I’m all about loyalty. In fact, I feel like part of what I’m being paid for here is my loyalty. But if there were somewhere else that valued loyalty more highly… I’m going wherever they value loyalty the most.”
+    - Dwight Schrute
+
+- text: |-
+    “Oh you’re paying way too much for worms. Who’s your worm guy?”
+    - Creed Bratton
+
+- text: |-
+    “I love my employees even though I hit one of you with my car.”
+    - Michael Scott
+
+- text: |-
+    “I don’t talk trash, I talk smack. They’re totally different. Trash talk is hypothetical, like: ‘Your mom is so fat she can eat the internet.’ But smack talk is happening like right now. Like: ‘You’re ugly and I know it for a fact ’cause I got the evidence right there.’”
+    - Kelly Kapoor
+
+- text: |-
+    “Who is justice beaver?”
+    - Dwight Schrute
+
+- text: |-
+    “Abraham Lincoln once said that ‘If you’re a racist, I will attack you with the North,’ and these are the principles I carry with me in the workplace.”
+    - Michael Scott
+
+- text: |-
+    “If I can’t scuba, then what’s this all been about? What am I working toward?”
+    - Creed Bratton
+
+- text: |-
+    “You couldn’t handle my undivided attention.”
+    - Dwight Schrute
+
+- text: |-
+    “I finally broke down and bought myself a plasma TV. Check it out. I actually hung this on the wall myself. I want to show you something: a lot of people in the room, you need more space, viola, right into the wall.”
+    - Michael Scott
+
+- text: |-
+    “As it turns out, you can’t just check someone into rehab against their will. They have to do it voluntarily. They have to hit rock bottom. So I think I know what I need to do at this point. I need to find ways to push Meredith to the bottom. Um. I think I can do it.”
+    - Michael Scott
+
+- text: |-
+    “Society teaches us that having feelings and crying is bad and wrong. Well, that’s baloney, because grief isn’t wrong. There’s such a thing as good grief. Just ask Charlie Brown.”
+    - Michael Scott
+
+- text: |-
+    “I wanted to eat a pig in a blanket, in a blanket.”
+    - Kevin Malone
+
+- text: |-
+    “I mean, I’m not a slut, but who knows.”
+    - Kelly Kapoor
+
+- text: |-
+    “I love catching people in the act. That’s why I always whip open doors.”
+    - Dwight Schrute
+
+- text: |-
+    “Fool me once, strike one. Fool me twice, strike three.”
+    - Michael Scott
+
+- text: |-
+    “I used to be obese. Once you’ve conquered obesity, everything else is easy. Life literally moves in slow motion. I’m not saying I’m Superman, but let me just put it this way. If I were shot in the head, I’m pretty sure everything would be fine. I’d almost welcome it.”
+    - Deangelo Vickers
+
+- text: |-
+    “I just wanted you to know that you can’t just say the word ‘bankruptcy’ and expect anything to happen.”
+    - Oscar Martinez
+
+- text: |-
+    “Nobody steals from Creed Bratton and gets away with it. The last person to do this disappeared. His name? Creed Bratton.”
+    - Creed Bratton
+
+- text: |-
+    “I feel like all my kids grew up, and then they married each other. It’s every parent’s dream.”
+    - Michael Scott
+
+- text: |-
+    “I don’t hate it. I just don’t like it at all and it’s terrible.”
+    - Michael Scott
+
+- text: |-
+    “Yeah, I have a lot of questions. Number one– how dare you?”
+    - Kelly Kapoor
+
+- text: |-
+    “You guys I’m, like, really smart now. You don’t even know. You could ask me, ‘Kelly, what’s the biggest company in the world?’ And I’d be like, ‘blah blah blah, blah blah blah blah blah blah.’ Giving you the exact right answer.”
+    - Kelly Kapoor
+
+- text: |-
+    “Come on guys. Early worm gets the worm.”
+    - Michael Scott
+
+- text: |-
+    “I think you’re under-thinking it.”
+    - Jim Halpert
+
+- text: |-
+    “I wish I could menstruate… I‘d be more in tune with the moon and the tides.”
+    - Dwight Schrute
+
+- text: |-
+    “Joke’s on you Goldenface, that man was a wanted animal rapist.”
+    - Michael Scarn
+
+- text: |-
+    “St. Patrick’s Day is the closest thing the Irish have to Christmas.”
+    - Michael Scott
+
+- text: |-
+    “I am fast. To give you a reference point I am somewhere between a snake and a mongoose… and a panther.”
+    - Dwight Schrute
+
+- text: |-
+    “Jim is my enemy. But it turns out that Jim is also his own worst enemy. And the enemy of my enemy is my friend. So Jim, is actually my friend. But, because he is his own worst enemy, the enemy of my friend is my enemy so actually Jim is my enemy.”
+    - Dwight Schrute
+
+- text: |-
+    “I do deserve a vacation. Sometimes Batman’s gotta take off his cape.”
+    - Kevin Malone
+
+- text: |-
+    “I guess I’ve been working so hard, I forgot what it’s like to be hardly working.”
+    - Michael Scott
+
+- text: |-
+    “Look, I know the reason that you guys became accountants is because you’re not good at interacting with people. But guess what! From now on you guys are no longer losers! So give yourselves a round of applause.”
+    - Kelly Kapoor
+
+- text: |-
+    “Close your mouth, sweetie. You look like a trout.”
+    - Phyllis Lapin-Vance
+
+- text: |-
+    “Bread is the paper of the food industry. You write your sandwich on it.”
+    - Dwight Schrute
+
+- text: |-
+    “Andy Bernard does not lose contests. He wins them…or he quits because they are unfair.”
+    - Andy Bernard
+
+- text: |-
+    “Break me off a piece of that… fancy feast.”
+    - Andy Bernard
+
+- text: |-
+    “I’m not usually the butt of the joke. I’m usually the face of the joke.”
+    - Michael Scott
+
+- text: |-
+    “I say dance, they say ‘How high?’”
+    - Michael Scott
+
+- text: |-
+    “The only problem is whenever I try to make a taco, I get too excited and crush it.”
+    - Kevin Malone
+
+- text: |-
+    “Tell ya one thing, I’m not gonna be a good mom tonight.”
+    - Meredith Palmer
+
+- text: |-
+    “My philosophy is basically this, and this is something I live by, and always have, and always will. Don’t ever, for any reason, do anything to anyone, for any reason, no matter what, no matter where, or who, or who you’re with or…or where you are going, or where you have been, ever, for any reason whatsoever.”
+    - Michael Scott
+
+- text: |-
+    “That is sort of an oaky afterbirth.”
+    - Michael Scott
+
+- text: |-
+    “From time to time I send Dwight faxes. From himself. From the future.”
+    - Jim Halpert
+
+- text: |-
+    “When my mother was pregnant with me, they did an ultrasound and found she was having twins. When they did another ultrasound a few weeks later, they discovered that I had adsorbed the other fetus. Do I regret this? No, I believe his tissue has made me stronger. I now have the strength of a grown man and a little baby.”
+    - Dwight Schrute
+
+- text: |-
+    “As a person who buys a lot of erotic cakes, it just feels good to be represented on one.”
+    - Phyllis Lapin-Vance
+
+- text: |-
+    “I’m always thinking one step ahead, like a carpenter that makes stairs.”
+    - Andy Bernard
+
+- text: |-
+    “Do you know who the real heroes are? The guys who wake up every morning and go into their normal jobs and get a distress call from the Commissioner and take off their glasses and change into capes and fly around fighting crime. Those are the real heroes.”
+    - Dwight Schrute
+
+- text: |-
+    “The rules of shotgun are very simple and very clear. The first person to shout ‘shotgun’ when you’re within sight of the car gets the front seat. That’s how the game’s played. There are no exceptions for someone with a concussion.”
+    - Michael Scott
+
+- text: |-
+    “Women cannot resist a man singing show tunes. It’s so powerful, even a lot of men can’t resist a man singing show tunes.”
+    - Andy Bernard
+
+- text: |-
+    “Besides having sex with men, I would say the Finer Things Club is the gayest thing about me.”
+    - Oscar Martinez
+
+- text: |-
+    “I stole. … And I robbed. And I kidnapped… the… president’s son. And held him for ransom.”
+    - Michael Scott
+
+- text: |-
+    “Saw Inception. Or at least I dreamt I did…”
+    - Michael Scott
+
+- text: |-
+    “I am a black belt in gift wrapping.”
+    - Jim Halpert
+
+- text: |-
+    “There’s something about an underdog that really inspires the unexceptional.”
+    - Robert California
+
+- text: |-
+    “In the end, the greatest snowball isn’t a snowball at all. It’s fear. Merry Christmas.”
+    - Dwight Schrute
+
+- text: |-
+    “The people here are amazing debaters. I guess you can say they are master-baters.”
+    - Kevin Malone
+
+- text: |-
+    “Do I look like someone who would waste my own time?”
+    - Robert California
+
+- text: |-
+    “News flash: You are not special.”
+    - Stanley Hudson
+
+- text: |-
+    “I am so tired of the Black Eyed Peas. It’s rock n roll for people who don’t like rock n roll. It’s rap for people who don’t like rap. It’s pop for people who don’t like pop.”
+    - Robert California
+
+- text: |-
+    “They always say that it’s a mistake to hire your friends. And they are right. So, I hired my best friends. And this is what I get!?”
+    - Michael Scott
+
+- text: |-
+    “In high school, I organized a walkout over standardized testing. Got over 500 students to just skip the SATs. At the last second I chickened out, took it anyway got a twelve twenty. Always regretted it… I feel lachrymose.”
+    - Andy Bernard
+
+- text: |-
+    “The eyes are the groin of the face.”
+    - Dwight Schrute
+
+- text: |-
+    “Jim told me you could buy gaydar online.”
+    - Dwight Schrute
+
+- text: |-
+    “Did I stutter?”
+    - Stanley Hudson
+
+- text: |-
+    “You can’t let a girl feel good about herself. It will backfire on you. Every compliment has to be backhanded. ‘Oh I like your dress, but I’d like it more if you had prettier hair.’”
+    - Andy Bernard
+
+- text: |-
+    “Most people don’t even know that a candy cane represents a shepherd’s crook. Which I assure you does not taste like peppermint. It tastes like sheep feces.”
+    - Dwight Schrute
+
+- text: |-
+    “You all took a life here today.  You did. The life of the party.”
+    - Michael Scott
+
+- text: |-
+    “Tell him to call me ASAP as possible.”
+    - Michael Scott
+
+- text: |-
+    “Hey Goldenface! Go puck yourself!”
+    - Michael Scarn
+
+- text: |-
+    “Ultimatums are key. Basically, nobody does anything for me anymore unless I threaten to kill myself.”
+    - Kelly Kapoor
+
+- text: |-
+    “I work hard all day. I like knowing that there’s going to be a break. Most days I just sit and wait for the break.”
+    - Kevin Malone
+
+- text: |-
+    “I kinda know what it’s like to be in commercials. My nickname in high school used to be Kool-Aid Man.”
+    - Kevin Malone
+
+- text: |-
+    “I want to be wine and dined and sixty-nined.”
+    - Kevin Malone
+
+- text: |-
+    “Whether you’re scared of dying, or dying alone, or dying drunk in a ditch, don’t be. It’s going to be OK.”
+    - Michael Scott
+
+- text: |-
+    “I already won the lottery. I was born in the US of A, baby. And as backup, I have a Swiss passport.”
+    - Creed Bratton
+
+- text: |-
+    “Everyone I know who skis is dead.”
+    - Deangelo Vickers
+
+- text: |-
+    “Jan is about to have a baby with a sperm donor. And, Michael is preparing for the birth of a watermelon with Dwight. Now, this baby will be related to Michael through… Delusion”
+    - Jim Halpert
+
+- text: |-
+    “In the wild, there is no healthcare. In the wild healthcare is, ‘Ow, I hurt my leg. I can’t run. A lion eats me, and I’m dead.’ Well, I’m not dead. I’m the lion. You’re dead.”
+    - Dwight Schrute
+
+- text: |-
+    “This is a dream that I’ve had…since lunch…and I’m not giving it up now.”
+    - Michael Scott
+
+- text: |-
+    “I would say I kind of have an unfair advantage, because I watch reality dating shows like a hawk, and I learn. I absorb information from the strategies of the winners and the losers. Actually, I probably learn more from the losers.”
+    - Michael Scott
+
+- text: |-
+    “I fell in love with these kids. And I didn’t want to see them fall victim to the system. So I made ’em a promise. I told them if they graduated from high school, I would pay for their college education. I have made some empty promises in my life but, hands down that was the most generous.”
+    - Michael Scott
+
+- text: |-
+    “Any man who says he totally understands women is a fool. Because they are un-understandable.”
+    - Michael Scott
+
+- text: |-
+    “He answers to Michael. Michael G. Scott. Michael J. Fox. Mr. Fox. The Incredible Mr. Fox.”
+    - Holly Fax
+
+- text: |-
+    “Oh my God it’s happening! Everybody stay calm. Stay calm!”
+    - Michael Scott
+
+- text: |-
+    “Bros before hoes. Why? Because your bros are always there for you. They have got your back after your hoe rips out your heart for no good reason. And you are nothing but great to your hoe, and you told her that she was the only hoe for you, and that she was better than all the other hoes in the world. And then, suddenly, she’s not your hoe no mo.”
+    - Michael Scott
+
+- text: |-
+    “You are the silent killer. Go back to the annex.”
+    - Michael Scott
+
+- text: |-
+    “People underestimate the power of nostalgia. Nostalgia is truly one of the greatest human weaknesses, second only to the neck.”
+    - Dwight Schrute
+
+- text: |-
+    “You know what, Toby? When the son of the deposed King of Nigeria e-mails you directly asking for help, you help. His father ran the freaking country, okay?”
+    - Michael Scott
+
+- text: |-
+    “Why are you the way that you are? Honestly, every time I try to do something fun, or exciting, you make it… not that way. I hate… so much about the things that you choose to be.”
+    - Michael Scott
+
+- text: |-
+    “Meredith, you lit your hair on fire today. What about tomorrow? What is going to happen when you come into work and you’re dead?”
+    - Michael Scott
+
+- text: |-
+    “Who’s the one who didn’t bring lice into the office? Meredith. Sure I gave everybody pink eye once, and my ex keyed a few of their cars, and yeah I BMed in the shredder on New Years. But I didn’t bring the lice in. That was all Pam.”
+    - Meredith Palmer
+
+- text: |-
+    “Alright. Truth is, I got a couple love bumps on my ding dong, so I was like oh, game over.”
+    - Todd Packer
+
+- text: |-
+    “Nobody should have to go to work thinking, ‘Oh this is the place that I might die today.’ That’s what a hospital is for.”
+    - Michael Scott
+
+- text: |-
+    “Hey everybody, he’s not in the men’s room. Although the seat was warm, so we may have just missed him.”
+    - Meredith Palmer
+
+- text: |-
+    “My heart belongs to music. But my ass, belongs to these people.”
+    - Andy Bernard
+
+- text: |-
+    “Creed Bratton has never declared bankruptcy. When Creed Bratton gets in trouble, he transfers his debt to William Charles Scheider.”
+    - Creed Bratton
+
+- text: |-
+    “If I had a gun with two bullets and I was in a room with Hitler, Bin Laden and Toby, I would shoot Toby twice.”
+    - Michael Scott
+
+- text: |-
+    “When Pam gets Michael’s old chair, I get Pam’s old chair. Then I’ll have two chairs. Only one to go.”
+    - Creed Bratton
+
+- text: |-
+    “You know a human can go on living for several hours after being decapitated.”
+    - Creed Bratton
+
+- text: |-
+    “So you’ve come to the master for guidance? Is this what you’re saying, grasshopper?”
+    - Michael Scott
+
+- text: |-
+    “Get out. No, this is not a joke. It was offensive and lame, so double offensive. This is an environment of welcoming and you should just get the hell out of here.”
+    - Michael Scott
+
+- text: |-
+    “Rit-dit-dit-do-doo!”
+    - Andy Bernard
