@@ -19,8 +19,8 @@ jobs:
           cache: true
           experimental: true
 
-      - name: create quotes.json file
-        run: touch quotes.json
+      - name: verify deps
+        run: go mod verify
 
       - name: check format
         run: mise run check:format
