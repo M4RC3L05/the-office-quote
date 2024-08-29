@@ -17,6 +17,8 @@ go build -ldflags "-s -w -X main.version="$VERSION"" -o ./.bin/
 
 [tasks."check:format"]
 run = """
+#!/usr/bin/env sh
+
 set -ex
 
 gofumpt -d -e -l -extra .
@@ -25,6 +27,8 @@ yamlfmt -dry -lint $(find . -name '*.yaml')
 
 [tasks."check:lint"]
 run = """
+#!/usr/bin/env sh
+
 set -ex
 
 golangci-lint run --timeout 5m --show-stats
