@@ -1,7 +1,8 @@
 [tools]
 go = "1.23"
-"go:github.com/golangci/golangci-lint/cmd/golangci-lint" = "latest"
-"go:mvdan.cc/gofumpt" = "latest"
+"go:github.com/golangci/golangci-lint/cmd/golangci-lint" = "1.61.0"
+"go:mvdan.cc/gofumpt" = "0.7.0"
+"go:github.com/goreleaser/goreleaser/v2" = "2.3.2"
 yamllint = "latest"
 yamlfmt = "latest"
 
@@ -31,6 +32,7 @@ run = """
 
 set -ex
 
+goreleaser check
 golangci-lint run --timeout 5m --show-stats
 yamllint $(find . -name '*.yaml')
 """
