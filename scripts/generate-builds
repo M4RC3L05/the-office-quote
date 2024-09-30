@@ -1,0 +1,142 @@
+#!/usr/bin/env sh
+
+set -e
+
+bin_name() {
+  name="the-office-quote-$1-$2"
+
+  printf "%s" "$name"
+}
+
+bin_name_build() {
+  name="$(bin_name "$1" "$2")"
+
+  if [ "$1" = "windows" ]; then
+    name="$name.exe"
+  fi
+
+  printf "%s" "$name"
+}
+
+compress_file_name() {
+  compress_file_path="$1"
+  win="$2"
+
+  if [ "$win" = "true" ]; then
+    compress_file_path="$compress_file_path.zip"
+  else
+    compress_file_path="$compress_file_path.tar.gz"
+  fi
+
+  printf "%s" "$compress_file_path"
+}
+
+bin_version() {
+  bin_version=$(git tag --sort=-creatordate | head -n 1)
+  [ -z "$bin_version" ] && bin_version="dev-build"
+
+  printf "%s" "$bin_version"
+}
+
+compile() {
+  os="$1"
+  arch="$2"
+  output_bin="$3"
+  bin_version="$4"
+
+  (
+    set -x;
+    GOOS="$1" GOARCH="$2" go build -ldflags "-s -w -X main.version="$bin_version"" -o "$output_bin"
+  )
+}
+
+compress_file() {
+  file_path="$1"
+  file_name="$(basename "$file_path")"
+  compress_file_path="$2"
+  compress_dir="$(dirname "$compress_file_path")"
+  win="$3"
+
+  if [ "$win" = "true" ]; then
+    (
+      set -x;
+      zip -j "$compress_file_path" "$file_path"
+    )
+  else
+    (
+      set -x;
+      tar -czvf "$compress_file_path" -C "$compress_dir" "$file_name"
+    )
+  fi
+}
+
+checksum_file() {
+  file_path="$1"
+  file_name="$(basename "$file_path")"
+  checksum_file_path="./$file_name.sha256"
+
+  (
+    set -x;
+    sha256sum "$file_name" > "$checksum_file_path"
+  )
+}
+
+version="$(bin_version)"
+target_os="linux|windows|darwin"
+target_arch="386|amd64|arm|arm64"
+script_dir=$(dirname "$(realpath "$0")")
+project_dir="$(realpath "$script_dir"/..)"
+
+rm -rf ./.bin
+mkdir ./.bin
+
+cd "$project_dir"
+
+for os_and_arch in $(go tool dist list); do
+  os="$(echo $os_and_arch | cut -d "/" -f1)"
+  arch="$(echo $os_and_arch | cut -d "/" -f2)"
+
+
+  if (echo "$os" | grep -qEv "$target_os"); then
+    continue
+  fi
+
+  if (echo "$arch" | grep -qEv "$target_arch"); then
+    continue
+  fi
+
+  echo "==> Building for $os/$arch"
+
+  win="false"
+
+  if [ "$os" = "windows" ]; then
+    win="true"
+  fi
+
+  out_name="$(bin_name "$os" "$arch")"
+  out_bin_name="$(bin_name_build "$os" "$arch")"
+  compressed_file_name="$(compress_file_name "$out_name" "$win")"
+
+  out_bin_path="$project_dir/.bin/$out_bin_name"
+  compress_file_path="$project_dir/.bin/$compressed_file_name"
+
+  echo
+
+  echo "=> Compiling for $os/$arch"
+  compile "$os" "$arch" "$out_bin_path" "$version"
+  echo
+
+  echo "=> Compress $out_bin_path"
+  compress_file "$out_bin_path" "$compress_file_path" "$win"
+  echo
+
+  echo "=> Remove $out_bin_path"
+  (set -x; rm "$out_bin_path")
+  echo
+
+  echo "=> Checksum for $compress_file_path"
+  (cd ./.bin/; checksum_file "$compressed_file_name")
+  echo
+
+  echo
+done
