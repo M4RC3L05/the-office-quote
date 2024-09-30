@@ -19,6 +19,9 @@ jobs:
           cache: true
           experimental: true
 
+      - name: install dependencies
+        run: go get .
+
       - name: verify deps
         run: go mod verify
 
