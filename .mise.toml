@@ -1,5 +1,5 @@
 [tools]
-go = "1.23"
+go = "1.23.1"
 "go:github.com/golangci/golangci-lint/cmd/golangci-lint" = "1.61.0"
 "go:mvdan.cc/gofumpt" = "0.7.0"
 yamlfmt = "0.13.0"
