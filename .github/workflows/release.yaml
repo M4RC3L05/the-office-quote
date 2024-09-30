@@ -16,10 +16,12 @@ jobs:
       - name: clone repository
         uses: actions/checkout@v4
 
-      - name: setup go
-        uses: magnetikonline/action-golang-cache@v5
+      - name: Install mise
+        uses: jdx/mise-action@v2
         with:
-          go-version: 1.23.1
+          install: true
+          cache: true
+          experimental: true
 
       - name: install dependencies
         run: go get .
