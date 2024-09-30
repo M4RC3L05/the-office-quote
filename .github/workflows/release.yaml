@@ -28,4 +28,4 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           # yamllint disable-line rule:line-length
-          artifacts: "./dist/the-office-quote_*.tar.gz,./dist/the-office-quote_*.zip,./dist/the-office-quote_*_checksums.txt"
+          artifacts: "./dist/the-office-quote_*.tar.gz,./dist/the-office-quote_*.zip,./dist/the-office-quote_*.sha256"
