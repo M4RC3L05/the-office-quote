@@ -122,7 +122,7 @@ for os_and_arch in $(go tool dist list); do
   echo
 
   echo "=> Compiling for $os/$arch"
-  compile "$os" "$arch" "$out_bin_path" "$version"
+  compile "$os" "$arch" "$out_bin_path" "$VERSION"
   echo
 
   echo "=> Compress $out_bin_path"
