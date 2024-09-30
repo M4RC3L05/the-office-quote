@@ -2,8 +2,15 @@
 
 set -e
 
+
 bin_name() {
   printf "the-office-quote"
+}
+
+bin_name_full() {
+  name="$(bin_name)-$1-$2"
+
+  printf "%s" "$name"
 }
 
 bin_name_build() {
@@ -37,6 +44,14 @@ bin_version() {
   printf "%s" "$bin_version"
 }
 
+
+VERSION="$(bin_version)"
+TARGET_OSS="linux|windows|darwin"
+TARGET_ARCHS="386|amd64|arm|arm64"
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+PROJECT_DIR="$(realpath "$SCRIPT_DIR"/..)"
+
+
 compile() {
   os="$1"
   arch="$2"
@@ -53,8 +68,8 @@ compress_file() {
   file_path="$1"
   file_name="$(basename "$file_path")"
   compress_file_path="$2"
-  compress_dir="$(dirname "$compress_file_path")"
-  win="$3"
+  compress_dir="$3"
+  win="$4"
 
   if [ "$win" = "true" ]; then
     (
@@ -80,29 +95,9 @@ checksum_file() {
   )
 }
 
-VERSION="$(bin_version)"
-TARGET_OSS="linux|windows|darwin"
-TARGET_ARCHS="386|amd64|arm|arm64"
-SCRIPT_DIR=$(dirname "$(realpath "$0")")
-PROJECT_DIR="$(realpath "$SCRIPT_DIR"/..)"
-
-rm -rf ./.bin
-mkdir ./.bin
-
-cd "$PROJECT_DIR"
-
-for os_and_arch in $(go tool dist list); do
-  os="$(echo $os_and_arch | cut -d "/" -f1)"
-  arch="$(echo $os_and_arch | cut -d "/" -f2)"
-
-
-  if (echo "$os" | grep -qEv "$TARGET_OSS"); then
-    continue
-  fi
-
-  if (echo "$arch" | grep -qEv "$TARGET_ARCHS"); then
-    continue
-  fi
+build() {
+  os="$1"
+  arch="$2"
 
   echo "==> Building for $os/$arch"
 
@@ -113,11 +108,15 @@ for os_and_arch in $(go tool dist list); do
   fi
 
   bin_name="$(bin_name)"
+  bin_full_name="$(bin_name_full "$os" "$arch")"
   bin_compile_name="$(bin_name_build "$os")"
   compressed_file_name="$(compress_file_name "$os" "$arch" "$bin_name")"
 
-  out_bin_path="$PROJECT_DIR/.bin/$bin_name"
+  out_bin_dir="$PROJECT_DIR/.bin/$bin_full_name"
+  out_bin_path="$out_bin_dir/$bin_name"
   compress_file_path="$PROJECT_DIR/.bin/$compressed_file_name"
+
+  mkdir -p "$out_bin_dir"
 
   echo
 
@@ -126,16 +125,36 @@ for os_and_arch in $(go tool dist list); do
   echo
 
   echo "=> Compress $out_bin_path"
-  compress_file "$out_bin_path" "$compress_file_path" "$win"
+  compress_file "$out_bin_path" "$compress_file_path" "$out_bin_dir" "$win"
   echo
 
-  echo "=> Remove $out_bin_path"
-  (set -x; rm "$out_bin_path")
+  echo "=> Remove $out_bin_dir"
+  (set -x; rm -r "$out_bin_dir")
   echo
 
   echo "=> Checksum for $compress_file_path"
   (cd ./.bin/; checksum_file "$compressed_file_name")
   echo
+}
 
-  echo
+rm -rf ./.bin
+mkdir ./.bin
+
+cd "$PROJECT_DIR"
+
+for os_and_arch in $(go tool dist list); do
+  os="$(echo $os_and_arch | cut -d "/" -f1)"
+  arch="$(echo $os_and_arch | cut -d "/" -f2)"
+
+  if (echo "$os" | grep -qEv "$TARGET_OSS"); then
+    continue
+  fi
+
+  if (echo "$arch" | grep -qEv "$TARGET_ARCHS"); then
+    continue
+  fi
+
+  build "$os" "$arch" &
 done
+
+wait
