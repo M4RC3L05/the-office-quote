@@ -4,7 +4,7 @@
   "exports": "./main.ts",
   "tasks": {
     "run": "./scripts/embed.ts && deno run --cached-only main.ts",
-    "compile": "./scripts/embed.ts && deno compile --cached-only --include ./embed.json -o ./.bin/the-office-quote ./main.ts",
+    "compile": "./scripts/embed.ts && deno compile --cached-only -o ./.bin/the-office-quote ./main.ts",
     "deps:lock": "deno cache --frozen=false main.ts",
     "deps": "deno cache --reload main.ts"
   },
