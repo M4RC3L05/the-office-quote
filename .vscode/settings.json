@@ -1,9 +1,17 @@
 {
+  "deno.enable": true,
+  "deno.lint": true,
   "editor.formatOnSave": true,
-  "go.lintTool": "golangci-lint",
-  "go.lintFlags": ["--fast"],
-  "go.useLanguageServer": true,
-  "gopls": {
-    "formatting.gofumpt": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  }
 }

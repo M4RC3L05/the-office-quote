@@ -23,14 +23,14 @@ jobs:
           cache: true
           experimental: true
 
-      - name: install dependencies
-        run: go get .
+      - name: install deps
+        run: deno task deps
 
       - name: build
-        run: goreleaser release --clean --skip=publish
+        run: ./scripts/embed.ts && ./scripts/build.ts
 
       - name: release
         uses: ncipollo/release-action@v1
         with:
           # yamllint disable-line rule:line-length
-          artifacts: "./dist/the-office-quote_*.tar.gz,./dist/the-office-quote_*.zip,./dist/the-office-quote_*.sha256"
+          artifacts: "./.bin/the-office-quote-*.tar.gz,./.bin/the-office-quote-*.zip,./.bin/the-office-quote-*.sha256"
