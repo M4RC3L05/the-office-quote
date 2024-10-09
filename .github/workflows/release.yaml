@@ -32,5 +32,4 @@ jobs:
       - name: release
         uses: ncipollo/release-action@v1
         with:
-          # yamllint disable-line rule:line-length
           artifacts: "./.bin/the-office-quote-*.tar.gz,./.bin/the-office-quote-*.zip,./.bin/the-office-quote-*.sha256"

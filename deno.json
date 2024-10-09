@@ -5,8 +5,8 @@
   "tasks": {
     "run": "./scripts/embed.ts && deno run --cached-only main.ts",
     "compile": "./scripts/embed.ts && deno compile --cached-only -o ./.bin/the-office-quote ./main.ts",
-    "deps:lock": "deno cache --frozen=false main.ts",
-    "deps": "deno cache --reload main.ts"
+    "deps:lock": "deno install --frozen=false --entrypoint main.ts",
+    "deps": "deno install --reload --entrypoint main.ts"
   },
   "lint": {
     "exclude": ["embed.json"],

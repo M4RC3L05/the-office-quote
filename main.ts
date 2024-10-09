@@ -1,4 +1,4 @@
-import { parse } from "@std/yaml";
+import { parse } from "@std/yaml/parse";
 import { parseArgs } from "@std/cli";
 import meta from "./deno.json" with { type: "json" };
 
