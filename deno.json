@@ -4,9 +4,7 @@
   "exports": "./main.ts",
   "tasks": {
     "run": "./scripts/embed.ts && deno run --cached-only main.ts",
-    "compile": "./scripts/embed.ts && deno compile --cached-only -o ./.bin/the-office-quote ./main.ts",
-    "deps:lock": "deno install --frozen=false --entrypoint main.ts",
-    "deps": "deno install --reload --entrypoint main.ts"
+    "compile": "./scripts/embed.ts && deno compile --cached-only -o ./.bin/the-office-quote ./main.ts"
   },
   "lint": {
     "exclude": ["embed.json"],
@@ -17,8 +15,13 @@
   "fmt": {
     "exclude": ["embed.json"]
   },
+  "lock": {
+    "frozen": true
+  },
   "imports": {
+    "@david/dax": "jsr:@david/dax@^0.42.0",
     "@std/cli": "jsr:@std/cli@1.0.6",
+    "@std/path": "jsr:@std/path@^1.0.6",
     "@std/yaml": "jsr:@std/yaml@1.0.5"
   }
 }
