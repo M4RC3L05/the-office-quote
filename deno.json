@@ -15,7 +15,9 @@
   "fmt": {
     "exclude": ["embed.json"]
   },
-  "lock": true,
+  "lock": {
+    "frozen": true
+  },
   "imports": {
     "@david/dax": "jsr:@david/dax@^0.42.0",
     "@std/cli": "jsr:@std/cli@1.0.6",
