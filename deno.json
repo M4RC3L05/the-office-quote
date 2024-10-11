@@ -3,8 +3,9 @@
   "version": "1.0.2",
   "exports": "./main.ts",
   "tasks": {
-    "run": "./scripts/embed.ts && deno run --cached-only main.ts",
-    "compile": "./scripts/embed.ts && deno compile --cached-only -o ./.bin/the-office-quote ./main.ts"
+    "run": "./scripts/embed.ts && deno run main.ts",
+    "compile": "./scripts/embed.ts && deno compile -o ./.bin/the-office-quote ./main.ts",
+    "install": "deno install --entrypoint main.ts"
   },
   "lint": {
     "exclude": ["embed.json"],
