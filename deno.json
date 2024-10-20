@@ -3,8 +3,8 @@
   "version": "1.0.2",
   "exports": "./main.ts",
   "tasks": {
-    "run": "./scripts/embed.ts && deno run --cached-only main.ts",
-    "compile": "./scripts/embed.ts && deno compile --cached-only -o ./.bin/the-office-quote ./main.ts"
+    "run": "./scripts/embed.ts && deno run main.ts",
+    "compile": "./scripts/embed.ts && deno compile -o ./.bin/the-office-quote ./main.ts"
   },
   "lint": {
     "exclude": ["embed.json"],
@@ -19,9 +19,9 @@
     "frozen": true
   },
   "imports": {
-    "@david/dax": "jsr:@david/dax@^0.42.0",
+    "@david/dax": "jsr:@david/dax@0.42.0",
     "@std/cli": "jsr:@std/cli@1.0.6",
-    "@std/path": "jsr:@std/path@^1.0.6",
+    "@std/path": "jsr:@std/path@1.0.6",
     "@std/yaml": "jsr:@std/yaml@1.0.5"
   }
 }
