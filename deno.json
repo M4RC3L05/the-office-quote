@@ -1,6 +1,6 @@
 {
   "name": "@m4rc3l05/the-office-quote",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "exports": "./main.ts",
   "tasks": {
     "run": "./scripts/embed.ts && deno run main.ts",
