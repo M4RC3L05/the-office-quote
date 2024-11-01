@@ -10,10 +10,11 @@
     "jsr:@std/fmt@1": "1.0.2",
     "jsr:@std/fs@1": "1.0.4",
     "jsr:@std/io@0.221": "0.221.0",
-    "jsr:@std/path@1": "1.0.7",
+    "jsr:@std/path@1": "1.0.8",
     "jsr:@std/path@1.0.6": "1.0.6",
     "jsr:@std/path@1.0.7": "1.0.7",
-    "jsr:@std/path@^1.0.6": "1.0.7",
+    "jsr:@std/path@1.0.8": "1.0.8",
+    "jsr:@std/path@^1.0.6": "1.0.8",
     "jsr:@std/streams@0.221": "0.221.0",
     "jsr:@std/yaml@1.0.5": "1.0.5"
   },
@@ -71,6 +72,9 @@
     "@std/path@1.0.7": {
       "integrity": "76a689e07f0e15dcc6002ec39d0866797e7156629212b28f27179b8a5c3b33a1"
     },
+    "@std/path@1.0.8": {
+      "integrity": "548fa456bb6a04d3c1a1e7477986b6cffbce95102d0bb447c67c4ee70e0364be"
+    },
     "@std/streams@0.221.0": {
       "integrity": "47f2f74634b47449277c0ee79fe878da4424b66bd8975c032e3afdca88986e61",
       "dependencies": [
@@ -85,7 +89,7 @@
     "dependencies": [
       "jsr:@david/dax@0.42.0",
       "jsr:@std/cli@1.0.6",
-      "jsr:@std/path@1.0.7",
+      "jsr:@std/path@1.0.8",
       "jsr:@std/yaml@1.0.5"
     ]
   }
