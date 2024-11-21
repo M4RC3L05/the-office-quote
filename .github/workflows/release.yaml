@@ -27,7 +27,7 @@ jobs:
         run: deno install
 
       - name: build
-        run: ./scripts/embed.ts && ./scripts/build.ts
+        run: ./scripts/build.ts
 
       - name: release
         uses: ncipollo/release-action@v1

@@ -3,8 +3,8 @@
   "version": "1.0.6",
   "exports": "./main.ts",
   "tasks": {
-    "run": "./scripts/embed.ts && deno run --cached-only main.ts",
-    "compile": "./scripts/embed.ts && deno compile --cached-only -o ./.bin/the-office-quote ./main.ts"
+    "run": "deno run --allow-read=./data --cached-only main.ts",
+    "compile": "deno compile --allow-read=./data --cached-only --include ./data/quotes.yaml -o ./.bin/the-office-quote ./main.ts"
   },
   "lint": {
     "exclude": ["embed.json"],

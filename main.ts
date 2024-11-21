@@ -14,6 +14,9 @@ Options:
   --version, -V   Display version
 `.trim();
 
+const quotesFile = new URL("./data/quotes.yaml", import.meta.url);
+const quotesFileContents = Deno.readTextFileSync(quotesFile);
+
 const getRandomInt = (min: number, max: number) => {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -29,13 +32,8 @@ const printVersion = () => {
   console.log(`v${meta.version}`);
 };
 
-const printQuote = async () => {
-  const textDecoder = new TextDecoder();
-
-  const embed = await import("./embed.json", { with: { type: "json" } })
-    .then(({ default: main }) => main);
-  const quotesData = Uint8Array.from(embed["quotes.yaml"] ?? []);
-  const quotes = parse(textDecoder.decode(quotesData)) as { text: string }[];
+const printQuote = () => {
+  const quotes = parse(quotesFileContents) as { text: string }[];
 
   if (!Array.isArray(quotes)) {
     console.error(`Could not parse quotes`);
