@@ -9,11 +9,13 @@ jobs:
     steps:
       - name: clone repository
         uses: actions/checkout@v4
+
       - name: Install mise
         uses: jdx/mise-action@v2
         with:
           install: true
           cache: true
+          experimental: true
 
       - name: install deps
         run: deno install
