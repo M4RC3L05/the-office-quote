@@ -7,13 +7,9 @@
     "compile": "deno compile --allow-read=./data --cached-only --include ./data/quotes.yaml -o ./.bin/the-office-quote ./main.ts"
   },
   "lint": {
-    "exclude": ["embed.json"],
     "rules": {
       "include": ["verbatim-module-syntax"]
     }
-  },
-  "fmt": {
-    "exclude": ["embed.json"]
   },
   "lock": {
     "frozen": true
