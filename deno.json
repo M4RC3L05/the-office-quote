@@ -4,7 +4,7 @@
   "exports": "./main.ts",
   "tasks": {
     "run": "deno run --allow-read=./data --cached-only main.ts",
-    "compile": "deno compile --allow-read=./data --cached-only --include ./data/quotes.yaml -o ./.bin/the-office-quote ./main.ts"
+    "compile": "deno compile --cached-only --include ./data/quotes.yaml -o ./.bin/the-office-quote ./main.ts"
   },
   "lint": {
     "rules": {

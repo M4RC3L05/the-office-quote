@@ -38,7 +38,7 @@ const buildFor = async (target: typeof targets[number]) => {
     ? `zip -j ${finalCompressPath} ${finalBinPath}`
     : `tar -czvf ${finalCompressPath} -C ${finalBinDir} ${finalBinName}`;
 
-  await $`deno compile --allow-read=./data --include ./data/quotes.yaml --target=${target} --output ${
+  await $`deno compile --include ./data/quotes.yaml --target=${target} --output ${
     $.path(finalBinPath)
   } main.ts`;
   await $.raw`${compressCmd}`;
