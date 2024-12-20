@@ -1,10 +1,11 @@
 #!/usr/bin/env -S deno run -A --cached-only
 
 import $ from "@david/dax";
-import { basename, resolve } from "@std/path";
 
-const rootDir = resolve(import.meta.dirname!, "../");
-const binDir = resolve(rootDir, ".bin");
+$.setPrintCommand(true);
+
+const rootDir = $.path(import.meta.dirname!).resolve("..");
+const binDir = rootDir.resolve(".bin");
 const binName = "the-office-quote" as const;
 
 const targets = [
@@ -15,37 +16,37 @@ const targets = [
   "aarch64-unknown-linux-gnu",
 ] as const;
 
-for (const file of Deno.readDirSync("./.bin")) {
-  if (
-    file.name.match(/.*\.(zip|tar\.gz)(\.sha256)?$/) ||
-    targets.some((target) => file.name.includes(target))
-  ) {
-    Deno.removeSync(`./.bin/${file.name}`, { recursive: true });
-  }
-}
-
 const buildFor = async (target: typeof targets[number]) => {
-  const finalBinDir = resolve(binDir, `${binName}-${target}`);
-  const finalBinName = target.includes("windows") ? `${binName}.exe` : binName;
-  const finalCompressName = target.includes("windows")
-    ? `${basename(finalBinDir)}.zip`
-    : `${basename(finalBinDir)}.tar.gz`;
-  const finalCompressPath = resolve(binDir, finalCompressName);
-  const checksumName = `${finalCompressName}.sha256`;
-  const checksumPath = resolve(binDir, checksumName);
-  const finalBinPath = resolve(finalBinDir, finalBinName);
-  const compressCmd = target.includes("windows")
-    ? `zip -j ${finalCompressPath} ${finalBinPath}`
-    : `tar -czvf ${finalCompressPath} -C ${finalBinDir} ${finalBinName}`;
+  const compileDirName = `${binName}-${target}`;
+  const compiledBinName = target.includes("windows")
+    ? `${binName}.exe`
+    : binName;
+  const compiledPath = binDir
+    .resolve(compileDirName)
+    .resolve(compiledBinName);
 
-  await $`deno compile --include ./data/quotes.yaml --target=${target} --output ${
-    $.path(finalBinPath)
-  } main.ts`;
-  await $.raw`${compressCmd}`;
-  await $`cd ${$.path(binDir)} && sha256sum ${finalCompressName} > ${
-    $.path(checksumPath)
+  const compressedBinName = target.includes("windows")
+    ? `${compileDirName}.zip`
+    : `${compileDirName}.tar.gz`;
+  const compressedPath = binDir.resolve(compressedBinName);
+  const checksumPath = compressedPath.parentOrThrow().join(
+    `${compressedBinName}.sha256`,
+  );
+
+  await $`deno compile --include=./data/quotes.yaml --target=${target} --output=${compiledPath} ${
+    rootDir.resolve("main.ts")
   }`;
-  await Deno.remove(finalBinDir, { recursive: true });
+
+  if (target.includes("windows")) {
+    await $`zip -j ${compressedPath} ${compiledPath}`;
+  } else {
+    await $`tar -czvf ${compressedPath} -C ${compiledPath.parentOrThrow()} ${binName}`;
+  }
+
+  await $`rm -r ${compiledPath.parentOrThrow()}`;
+
+  await $`cd ${binDir} && sha256sum ${compressedBinName} > ${checksumPath}`;
 };
 
+await binDir.emptyDir();
 await Promise.all(targets.map(buildFor));
