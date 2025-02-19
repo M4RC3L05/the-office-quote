@@ -1,6 +1,6 @@
 {
   "name": "@m4rc3l05/the-office-quote",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "exports": "./main.ts",
   "tasks": {
     "run": {
