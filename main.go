@@ -47,7 +47,9 @@ func main() {
 	var data []Quote
 
 	if err := yaml.Unmarshal(quotes, &data); err != nil {
-		panic(err)
+		println(err.Error())
+
+		os.Exit(1)
 	}
 
 	println(data[rand.Intn(len(data))].Text)
