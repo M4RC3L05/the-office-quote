@@ -32,10 +32,11 @@ main() {
     extension="$(resolve_binary_extension "$os")"
     compress_extension="$(resolve_compress_extension "$os")"
 
-    final_binary_name="$BIN_NAME-$os-$arch"
-    final_compress_name="$final_binary_name$compress_extension"
+    binary_name_with_os_and_arch="$BIN_NAME-$os-$arch"
+    binary_with_extension="$BIN_NAME$extension"
+    final_compress_name="$binary_name_with_os_and_arch$compress_extension"
 
-    compile_path=".bin/$final_binary_name/$BIN_NAME$extension"
+    compile_path=".bin/$binary_name_with_os_and_arch/$binary_with_extension"
     compress_path=".bin/$final_compress_name"
     checksum_path="$final_compress_name.sha256"
 

@@ -24,7 +24,7 @@ jobs:
           experimental: true
 
       - name: install deps
-        run: go get .
+        run: go mod download
 
       - name: release
         run: ./scripts/release
