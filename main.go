@@ -40,17 +40,17 @@ func main() {
 	}
 
 	if *versionFlag {
-		println(Version)
+		fmt.Println(Version)
 		return
 	}
 
 	var data []Quote
 
 	if err := yaml.Unmarshal(quotes, &data); err != nil {
-		println(err.Error())
+		fmt.Println(err.Error())
 
 		os.Exit(1)
 	}
 
-	println(data[rand.Intn(len(data))].Text)
+	fmt.Println(data[rand.Intn(len(data))].Text)
 }
