@@ -13,7 +13,7 @@ import (
 //go:embed data/quotes.yaml
 var quotes []byte
 
-var Version string = "v1.1.1"
+var Version string = "v1.1.2"
 
 type Quote struct {
 	Text string
