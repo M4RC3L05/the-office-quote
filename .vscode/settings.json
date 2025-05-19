@@ -1,8 +1,6 @@
 {
-  "deno.enable": true,
-  "deno.lint": true,
   "editor.formatOnSave": true,
   "[go]": {
-   "editor.defaultFormatter": "golang.go"
+    "editor.defaultFormatter": "golang.go"
   }
 }
